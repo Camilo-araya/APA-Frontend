@@ -21,7 +21,7 @@ const Clientes = () => {
       direccion: "Feliciano Cornejo 340",
       contacto: "+56 9 8765 4321",
       rrss: "@toshita",
-      categoria: "Muebles",
+      categoria: "Mueblería",
       imagen: muebleriaToshitaImg
     },
     {
