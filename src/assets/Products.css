@@ -1,0 +1,30 @@
+.products {
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.products h1 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.products p {
+  color: var(--color-text);
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .products {
+    padding: 1rem;
+  }
+
+  .products h1 {
+    font-size: 1.5rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}

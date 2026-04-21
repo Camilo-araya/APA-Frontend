@@ -1,0 +1,63 @@
+/* 🎨 Paleta de colores base */
+:root {
+  --color-primary: #1e3a8a;   /* Azul corporativo */
+  --color-secondary: #16a34a; /* Verde para acciones */
+  --color-accent: #facc15;    /* Amarillo para resaltar */
+  --color-text: #374151;      /* Gris oscuro */
+  --color-muted: #6b7280;     /* Gris medio */
+  --color-bg: #f9fafb;        /* Fondo claro */
+}
+
+/* 🔘 Reset básico */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+    overflow-x: hidden; /* evita scroll lateral */
+}
+
+/* Layout general para que el footer quede abajo */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ocupa toda la altura de la ventana */
+}
+
+main {
+  flex: 1; /* empuja el footer hacia abajo */
+}
+/* Asegura que todo ocupe el ancho completo */
+section {
+  width: 100%;
+  margin: 0 auto;    /* centra el contenido */
+  padding: 2rem;
+}
+
+/* 🔧 Layout base para toda la app */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* asegura que el footer quede abajo */
+}
+
+main {
+  flex: 1;           /* ocupa todo el espacio disponible */
+  width: 100%;       /* ancho completo */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ✅ Contenedor full width opcional */
+.full-width {
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
