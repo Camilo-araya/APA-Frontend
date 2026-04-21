@@ -1,40 +1,93 @@
-.home {
-  margin: 0;          /* elimina márgenes laterales */
-  padding: 2rem;      /* mantiene espacio interno */
+.home-banner {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to right, #0077b6, #00b4d8),
+              url("https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  padding: 2rem;
 }
 
-.home h1 {
-  color: var(--color-primary);
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2.5rem;
+  border-radius: 12px;
+  color: #fff;
+  max-width: 900px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.title {
+  font-size: 3rem;
   margin-bottom: 1rem;
+  font-weight: bold;
 }
 
-.home-info {
-  margin-top: 2rem;
+.subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
 }
 
-.home-info h2 {
-  color: var(--color-secondary);
-  margin-bottom: 0.5rem;
+.home-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cta-btn {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.cta-btn.primary {
+  background: #ffffff;
+  color: #0077b6;
+}
+
+.cta-btn.primary:hover {
+  background: #caf0f8;
+  color: #023e8a;
+}
+
+.cta-btn.secondary {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.cta-btn.secondary:hover {
+  background: #ffffff;
+  color: #0077b6;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* 📱 Responsivo */
 @media (max-width: 768px) {
-  .home {
-    padding: 1rem;
+  .title {
+    font-size: 2rem;
   }
-
-  .home h1 {
-    font-size: 1.5rem;
+  .subtitle {
+    font-size: 1rem;
   }
-
-  .home-info h2 {
-    font-size: 1.2rem;
+  .overlay {
+    padding: 1.5rem;
   }
-}
-
-* {
-  box-sizing: border-box;
+  .cta-btn {
+    width: 100%;
+    text-align: center;
+  }
 }

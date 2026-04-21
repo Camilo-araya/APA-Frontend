@@ -1,0 +1,78 @@
+.planes {
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.planes h1 {
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.planes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.plan-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+}
+
+.plan-card h2 {
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.plan-card p {
+  margin-bottom: 1.5rem;
+}
+
+.precio {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #0077b6;
+}
+
+.cta-btn {
+  background: #0077b6;
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #00b4d8;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .plan-card {
+    padding: 1.5rem;
+  }
+
+  .plan-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .plan-card p {
+    font-size: 1rem;
+  }
+
+  .precio {
+    font-size: 1rem;
+  }
+}
