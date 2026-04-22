@@ -1,6 +1,7 @@
 import "../assets/Clientes.css";
-import academiaImg from "../assets/clientes/academia_arquero_sm.jpg";
+import academiaImg from "../assets/clientes/academia_arqueros_sm.jpg";
 import muebleriaToshitaImg from "../assets/clientes/muebleria_toshita.jpg";
+import farmaciaelSolImg from "../assets/clientes/farmacia_el_sol.png";
 
 const Clientes = () => {
   const clientes = [
@@ -33,6 +34,16 @@ const Clientes = () => {
       rrss: "@techpyme",
       categoria: "Tecnología",
       imagen: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+    },
+        {
+      nombre: "Farmacia el Sol",
+      descripcion: "Farmacia con productos de calidad y servicio personalizado.",
+      comuna: "Curacavi",
+      direccion: "Av. Ohiggins",
+      contacto: "+56 2 2345 6789",
+      rrss: "@farmaciaelsol",
+      categoria: "Farmacia",
+      imagen: farmaciaelSolImg
     },
   ];
 
