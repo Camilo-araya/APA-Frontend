@@ -1,5 +1,5 @@
 import "../assets/Clientes.css";
-import academiaImg from "../assets/clientes/academia_arqueros_sm.jpg";
+import academiaImg from "../assets/clientes/academia_arquero_sm.jpg";
 import muebleriaToshitaImg from "../assets/clientes/muebleria_toshita.jpg";
 
 const Clientes = () => {
@@ -12,7 +12,7 @@ const Clientes = () => {
     contacto: "+56 9 1234 5678",
     rrss: "@academiaarqueros",
     categoria: "Deporte",
-    imagen: academiaImg,
+    imagen: academiaImg
   },
     {
       nombre: "Mueblería Toshita",
@@ -22,7 +22,7 @@ const Clientes = () => {
       contacto: "+56 9 8765 4321",
       rrss: "@toshita",
       categoria: "Mueblería",
-      imagen: muebleriaToshitaImg,
+      imagen: muebleriaToshitaImg
     },
     {
       nombre: "TechPyme",
