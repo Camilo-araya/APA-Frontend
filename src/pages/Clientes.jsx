@@ -1,5 +1,5 @@
 import "../assets/Clientes.css";
-import academiaImg from "../assets/clientes/Academia_Arqueros_SM.jpg";
+import academiaImg from "../assets/clientes/academia_arqueros_sm.jpg";
 import muebleriaToshitaImg from "../assets/clientes/muebleria_toshita.jpg";
 
 const Clientes = () => {
