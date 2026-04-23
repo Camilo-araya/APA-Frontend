@@ -1,7 +1,7 @@
 import "../assets/Clientes.css";
-import academiaImg from "../assets/clientes/academia_arqueros_sm.jpg";
-import muebleriaToshitaImg from "../assets/clientes/muebleria_toshita.jpg";
-import farmaciaelSolImg from "../assets/clientes/farmacia_el_sol.png";
+import academiaImg from "../assets/Clientes/academia_arqueros_sm.jpg";
+import muebleriaToshitaImg from "../assets/Clientes/muebleria_toshita.jpg";
+import farmaciaelSolImg from "../assets/Clientes/farmacia_el_sol.png";
 
 const Clientes = () => {
   const clientes = [
