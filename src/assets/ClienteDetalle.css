@@ -1,0 +1,77 @@
+.cliente-detalle {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.cliente-detalle h1 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.galeria img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cliente-detalle p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.cliente-detalle .comuna {
+  font-weight: bold;
+  color: #0077b6;
+}
+
+.cliente-detalle .categoria {
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+.volver-clientes {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.volver-clientes:hover {
+  background: var(--color-secondary);
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .cliente-detalle {
+    padding: 1rem;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr; /* una columna en mobile */
+  }
+
+  .galeria img {
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+  }
+}

@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Planes from "./pages/Planes";
 import Clientes from "./pages/Clientes";
+import ClienteDetalle from "./pages/ClienteDetalle";
 import FilterComunas from "./components/FilterComunas";
 import "./styles.css";
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/planes" element={<Planes />} />
           <Route path="/clientes" element={<Clientes />} />
+          <Route path="/clientes/:slug" element={<ClienteDetalle />} />
           <Route path="/filter" element={<FilterComunas />} />
         </Routes>
       </main>

@@ -1,0 +1,51 @@
+import academiaImg from "../assets/Clientes/Academia_Arqueros_SM.jpg";
+import muebleriaToshitaImg from "../assets/Clientes/muebleria_toshita.jpg";
+import farmaciaelSolImg from "../assets/Clientes/farmacia_el_sol.png";
+import BarberStudioCrcImg from "../assets/Clientes/barber_studio_crc.jpg";
+
+export const clientes = [
+  {
+    nombre: "Academia de Arqueros SM",
+    slug: "academia-arqueros-sm",
+    descripcion: "Entrenamiento de arqueros para todas las edades y niveles.",
+    comuna: "Curacavi",
+    direccion: "Av. Ohiggins",
+    contacto: "+56 9 1234 5678",
+    rrss: "@academiaarqueros",
+    categoria: "Deporte",
+    imagen: academiaImg
+  },
+  {
+    nombre: "Mueblería Toshita",
+    slug: "muebleria-toshita",
+    descripcion: "Muebles de diseño y calidad para tu hogar.",
+    comuna: "Curacavi",
+    direccion: "Feliciano Cornejo 340",
+    contacto: "+56 9 8765 4321",
+    rrss: "@toshita",
+    categoria: "Mueblería",
+    imagen: muebleriaToshitaImg
+  },
+  {
+    nombre: "Barber Studio Crc",
+    slug: "BarberStudioCrc",
+    descripcion: "Barbería con estilo y servicio de calidad para hombres modernos.",
+    comuna: "Curacavi",
+    direccion: "Presbitero Moraga 246",
+    contacto: "+5698904312",
+    rrss: "@barberstudio.cr.c",
+    categoria: "Barbería",
+    imagen: BarberStudioCrcImg
+  },
+  {
+    nombre: "Farmacia el Sol",
+    slug: "farmacia-el-sol",
+    descripcion: "Farmacia con productos de calidad y servicio personalizado.",
+    comuna: "Curacavi",
+    direccion: "Av. Ohiggins",
+    contacto: "+56 2 2345 6789",
+    rrss: "@farmaciaelsol",
+    categoria: "Farmacia",
+    imagen: farmaciaelSolImg
+  }
+];
