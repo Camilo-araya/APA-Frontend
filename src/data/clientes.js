@@ -2,6 +2,9 @@ import academiaImg from "../assets/Clientes/Academia_Arqueros_SM.jpg";
 import muebleriaToshitaImg from "../assets/Clientes/muebleria_toshita.jpg";
 import farmaciaelSolImg from "../assets/Clientes/farmacia_el_sol.png";
 import BarberStudioCrcImg from "../assets/Clientes/barber_studio_crc.jpg";
+import EscuelaAlfredoRojasImg from "../assets/Clientes/escuela_alfredo_rojas.png";
+import LaCasadelaEmpanadaImg from "../assets/Clientes/la_casa_dela_empanada.png";
+import DulceSaladoImg from "../assets/Clientes/dulce_salado.jpg";
 
 export const clientes = [
   {
@@ -47,5 +50,39 @@ export const clientes = [
     rrss: "@farmaciaelsol",
     categoria: "Farmacia",
     imagen: farmaciaelSolImg
+  },
+    {
+    nombre: "Escuela De Fútbol Alfredo Rojas",
+    slug: "escuela-de-futbol-alfredo-rojas",
+    descripcion: "Escuela de fútbol para niños y jóvenes.",
+    comuna: "Curacavi",
+    direccion: "Lo Aguila 1000 y Cancha Atlanta",
+    contacto: "+56968195868",
+    rrss: "@escuelalfredorojas",
+    categoria: "Deporte",
+    imagen: EscuelaAlfredoRojasImg
+  },
+     {
+    nombre: "Casa de la Empanada Curacaví",
+    slug: "casa-de-la-empanada-curacavi",
+    descripcion: "Deliciosas empanadas artesanales.",
+    comuna: "Curacavi",
+    direccion: "Av. Ohiggins 1500",
+    contacto: "+56982332324",
+    rrss: "@laCasadelaEmpanada_cvi",
+    categoria: "Comida",
+    imagen: LaCasadelaEmpanadaImg
+  },
+     {
+    nombre: "Dulce Salado Curacaví",
+    slug: "dulce-salado-curacavi",
+    descripcion: "Tortas, pasteles, coqteles y más.",
+    comuna: "Curacavi",
+    direccion: "Santa Beatriz 1336",
+    contacto: "+56996125036",
+    rrss: "@DulceSaladoCuracavi",
+    categoria: "Comida",
+    imagen: DulceSaladoImg
   }
+
 ];

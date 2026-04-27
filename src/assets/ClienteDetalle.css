@@ -1,37 +1,47 @@
 .cliente-detalle {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 2rem auto;
   padding: 2rem;
   background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
   text-align: center;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .cliente-detalle h1 {
   color: var(--color-primary);
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .galeria {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .galeria img {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  height: auto;             /* altura automática */
+  max-height: 300px;        /* límite para que no se desborde */
+  object-fit: contain;      /* muestra la imagen completa */
+  background-color: #f9f9f9; /* fondo suave para espacios vacíos */
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
+.galeria img:hover {
+  transform: scale(1.03);
+}
+
+
 .cliente-detalle p {
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-  line-height: 1.4;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .cliente-detalle .comuna {
@@ -46,17 +56,20 @@
 
 .volver-clientes {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
   background: var(--color-primary);
   color: #fff;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
-  transition: background 0.3s;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
 }
 
 .volver-clientes:hover {
   background: var(--color-secondary);
+  transform: translateY(-2px);
 }
 
 /* 📱 Mobile */
@@ -66,12 +79,20 @@
   }
 
   .galeria {
-    grid-template-columns: 1fr; /* una columna en mobile */
+    grid-template-columns: 1fr;
   }
 
   .galeria img {
     height: auto;
-    max-height: 250px;
+    max-height: 280px;
     object-fit: contain;
+  }
+
+  .cliente-detalle h1 {
+    font-size: 1.6rem;
+  }
+
+  .cliente-detalle p {
+    font-size: 0.9rem;
   }
 }
