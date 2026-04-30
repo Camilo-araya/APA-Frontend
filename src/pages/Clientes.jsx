@@ -1,4 +1,6 @@
+import { useState } from "react";
 import "../assets/Clientes.css";
+import "../assets/Filtro.css";
 import academiaImg from "../assets/Clientes/Academia_Arqueros_SM.jpg";
 import muebleriaToshitaImg from "../assets/Clientes/muebleria_toshita.jpg";
 import farmaciaelSolImg from "../assets/Clientes/farmacia_el_sol.png";
@@ -6,13 +8,14 @@ import BarberStudioCrcImg from "../assets/Clientes/barber_studio_crc.jpg";
 import EscuelaAlfredoRojasImg from "../assets/Clientes/escuela_alfredo_rojas.png";
 import LaCasadelaEmpanadaImg from "../assets/Clientes/la_casa_dela_empanada.png";
 import DulceSaladoImg from "../assets/Clientes/dulce_salado.jpg";
-import { Link } from "react-router-dom"; // 
+import JardindeHamburguesasImg from "../assets/Clientes/jardin_de_hamburguesas.png";
+import { Link } from "react-router-dom";
 
 const Clientes = () => {
   const clientes = [
     {
       nombre: "Academia de Arqueros SM",
-      slug: "academia-arqueros-sm", // 👈 URL única
+      slug: "academia-arqueros-sm",
       descripcion: "Entrenamiento de arqueros para todas las edades y niveles.",
       comuna: "Curacavi",
       direccion: "Av. Ohiggins",
@@ -34,7 +37,7 @@ const Clientes = () => {
     },
     {
       nombre: "Barber Studio Crc",
-      slug: "BarberStudioCrc",
+      slug: "barber-studio-crc",
       descripcion: "Barbería con estilo y servicio de calidad para hombres modernos.",
       comuna: "Curacavi",
       direccion: "Presbitero Moraga 246",
@@ -65,7 +68,7 @@ const Clientes = () => {
       categoria: "Deporte",
       imagen: EscuelaAlfredoRojasImg
     },
-       {
+    {
       nombre: "Casa de la Empanada Curacaví",
       slug: "casa-de-la-empanada-curacavi",
       descripcion: "Deliciosas empanadas artesanales.",
@@ -76,8 +79,7 @@ const Clientes = () => {
       categoria: "Comida",
       imagen: LaCasadelaEmpanadaImg
     },
-
-     {
+    {
       nombre: "Dulce Salado Curacaví",
       slug: "dulce-salado-curacavi",
       descripcion: "Tortas, pasteles, coqteles y más.",
@@ -87,16 +89,61 @@ const Clientes = () => {
       rrss: "@DulceSaladoCuracavi",
       categoria: "Comida",
       imagen: DulceSaladoImg
+    },
+
+    {
+      nombre: "Jardin de Hamburguesas",
+      slug: "jardin-de-hamburguesas",
+      descripcion: "Hamburguesas gourmet con ingredientes frescos y deliciosos.",
+      comuna: "Curacavi",
+      direccion: "Las Acacias 621",
+      contacto: "+56975315927",
+      rrss: "@jardindehamburguesas",
+      categoria: "Comida",
+      imagen: JardindeHamburguesasImg
     }
   ];
+
+  // Estados para filtros
+  const [categoriaFiltro, setCategoriaFiltro] = useState("");
+  const [comunaFiltro, setComunaFiltro] = useState("");
+
+  // Obtener categorías y comunas únicas dinámicamente
+  const categoriasUnicas = [...new Set(clientes.map(c => c.categoria))];
+  const comunasUnicas = [...new Set(clientes.map(c => c.comuna))];
+
+  // Filtrar clientes
+  const clientesFiltrados = clientes.filter(c => {
+    const matchCategoria = categoriaFiltro ? c.categoria === categoriaFiltro : true;
+    const matchComuna = comunaFiltro ? c.comuna === comunaFiltro : true;
+    return matchCategoria && matchComuna;
+  });
 
   return (
     <section className="clientes">
       <h1>Nuestros Clientes</h1>
       <p>Conoce las empresas que confían en nuestra publicidad.</p>
 
+      {/* Filtros */}
+      <div className="filtro-clientes">
+        <select value={categoriaFiltro} onChange={(e) => setCategoriaFiltro(e.target.value)}>
+          <option value="">Todas las categorías</option>
+          {categoriasUnicas.map((cat, i) => (
+            <option key={i} value={cat}>{cat}</option>
+          ))}
+        </select>
+
+        <select value={comunaFiltro} onChange={(e) => setComunaFiltro(e.target.value)}>
+          <option value="">Todas las comunas</option>
+          {comunasUnicas.map((com, i) => (
+            <option key={i} value={com}>{com}</option>
+          ))}
+        </select>
+      </div>
+
+      {/* Grid de clientes */}
       <div className="clientes-grid">
-        {clientes.map((cliente, index) => (
+        {clientesFiltrados.map((cliente, index) => (
           <div key={index} className="cliente-card">
             <img src={cliente.imagen} alt={cliente.nombre} className="cliente-img" />
             <h2>{cliente.nombre}</h2>
@@ -107,7 +154,6 @@ const Clientes = () => {
             <p className="rrss">🔗 {cliente.rrss}</p>
             <p className="categoria">📂 {cliente.categoria}</p>
 
-            {/* 👇 Botón Ver más con URL única */}
             <Link to={`/clientes/${cliente.slug}`} className="ver-mas">
               Ver más
             </Link>

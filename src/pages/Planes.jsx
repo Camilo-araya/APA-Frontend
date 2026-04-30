@@ -5,17 +5,17 @@ const Planes = () => {
     {
       nombre: "Plan Básico",
       descripcion: "Publicidad inicial para tu Pyme con bajo costo y resultados medibles.",
-      precio: "$50.000 CLP / mes",
+      precio: "$30.000 CLP / mes",
     },
     {
       nombre: "Plan Estrella",
       descripcion: "Campañas digitales avanzadas con mayor alcance y optimización.",
-      precio: "$120.000 CLP / mes",
+      precio: "$50.000 CLP / mes",
     },
     {
       nombre: "Plan Premium",
       descripcion: "Marketing integral con gestión personalizada y reportes detallados.",
-      precio: "$250.000 CLP / mes",
+      precio: "$80.000 CLP / mes",
     },
   ];
 

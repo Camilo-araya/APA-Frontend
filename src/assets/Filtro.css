@@ -1,0 +1,63 @@
+.filtro-clientes {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: var(--color-primary); /* mismo color que el navbar */
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Selects */
+.filtro-clientes select {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.95rem;
+  background: #fff url("data:image/svg+xml;utf8,<svg fill='%230077b6' height='24' viewBox='0 0 24 24' width='24'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 0.8rem center;
+  background-size: 18px;
+  color: #333;
+  min-width: 180px;
+  appearance: none; /* quita la flecha por defecto */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filtro-clientes select:hover {
+  box-shadow: 0 0 6px rgba(0, 119, 182, 0.3);
+}
+
+/* Botón limpiar */
+.filtro-clientes button {
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: #fff;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.filtro-clientes button:hover {
+  background: var(--color-secondary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .filtro-clientes {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filtro-clientes select,
+  .filtro-clientes button {
+    width: 100%;
+  }
+}

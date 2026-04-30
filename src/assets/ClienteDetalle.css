@@ -25,7 +25,7 @@
 .galeria img {
   width: 100%;
   height: auto;             /* altura automática */
-  max-height: 300px;        /* límite para que no se desborde */
+  max-height: 280px;        /* límite para que no se desborde */
   object-fit: contain;      /* muestra la imagen completa */
   background-color: #f9f9f9; /* fondo suave para espacios vacíos */
   border-radius: 12px;

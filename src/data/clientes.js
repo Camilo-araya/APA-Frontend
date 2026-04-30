@@ -5,6 +5,7 @@ import BarberStudioCrcImg from "../assets/Clientes/barber_studio_crc.jpg";
 import EscuelaAlfredoRojasImg from "../assets/Clientes/escuela_alfredo_rojas.png";
 import LaCasadelaEmpanadaImg from "../assets/Clientes/la_casa_dela_empanada.png";
 import DulceSaladoImg from "../assets/Clientes/dulce_salado.jpg";
+import JardindeHamburguesasImg from "../assets/Clientes/jardin_de_hamburguesas.png";
 
 export const clientes = [
   {
@@ -83,6 +84,17 @@ export const clientes = [
     rrss: "@DulceSaladoCuracavi",
     categoria: "Comida",
     imagen: DulceSaladoImg
+  },
+     {
+    nombre: "Jardin de Hamburguesas",
+    slug: "jardin-de-hamburguesas",
+    descripcion: "Hamburguesas gourmet con ingredientes frescos y deliciosos.",
+    comuna: "Curacavi",
+    direccion: "Las Acacias 621",
+    contacto: "+56975315927",
+    rrss: "@jardindehamburguesas",
+    categoria: "Comida",
+    imagen: JardindeHamburguesasImg
   }
 
 ];
