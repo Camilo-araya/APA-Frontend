@@ -8,7 +8,7 @@ import BarberStudioCrcImg from "../assets/Clientes/barber_studio_crc.jpg";
 import EscuelaAlfredoRojasImg from "../assets/Clientes/escuela_alfredo_rojas.png";
 import LaCasadelaEmpanadaImg from "../assets/Clientes/la_casa_dela_empanada.png";
 import DulceSaladoImg from "../assets/Clientes/dulce_salado.jpg";
-import JardindeHamburguesasImg from "../assets/Clientes/jardin_de_hamburguesas.png";
+import JardindeHamburguesasImg from "../assets/Clientes/jardin_de_Hamburguesas.png";
 import { Link } from "react-router-dom";
 
 const Clientes = () => {
