@@ -76,3 +76,62 @@
     font-size: 1rem;
   }
 }
+
+.servicios-extra {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.servicios-extra h2 {
+  font-size: 1.6rem;
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+}
+
+.extras-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.extra-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.extra-card h3 {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.precio-extra {
+  display: inline-block;
+  font-weight: 700;
+  color: #16a34a;
+  margin-bottom: 0.8rem;
+}
+
+.extra-card p {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.4;
+  margin-bottom: 1.2rem;
+}
+
+.cta-btn.secondary {
+  background-color: #3b82f6;
+}
+
+.cta-btn.secondary:hover {
+  background-color: #1d4ed8;
+}
