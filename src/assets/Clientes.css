@@ -1,5 +1,200 @@
 .clientes {
-  padding: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--color-bg, #f8f9fa);
+  color: var(--color-text, #333);
+}
+
+.clientes h1 {
+  color: var(--color-primary, #0077b6);
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.clientes p {
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+/* Filtros alineados al centro */
+.filtro-clientes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.filtro-clientes select {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.filtro-clientes select:focus {
+  border-color: var(--color-primary, #0077b6);
+}
+
+/* Grid uniforme para Desktop */
+.clientes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* Tarjeta estructurada en Flexbox para alinear elementos */
+.cliente-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cliente-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Contenedor de imagen con proporción fija */
+.cliente-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+  background-color: #f1f5f9;
+}
+
+.cliente-card h2 {
+  color: var(--color-secondary, #023e8a);
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.descripcion {
+  margin-bottom: 0.8rem;
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.4;
+  flex-grow: 1; /* Ocupa el espacio sobrante para empujar los detalles al fondo */
+}
+
+/* Detalles del cliente */
+.comuna, .direccion, .contacto, .rrss, .categoria {
+  display: block;
+  font-size: 0.82rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+  color: #444;
+}
+
+.comuna {
+  font-weight: 600;
+  color: #0077b6;
+}
+
+.categoria {
+  font-style: italic;
+  color: var(--color-accent, #e63946);
+  margin-bottom: 0.8rem;
+}
+
+/* Botón "Ver más" alineado al final de la tarjeta */
+.ver-mas {
+  display: block;
+  text-align: center;
+  background-color: var(--color-primary, #0077b6);
+  color: #ffffff;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-top: auto; /* Empuja el botón al final de la tarjeta */
+  transition: background-color 0.2s ease;
+}
+
+.ver-mas:hover {
+  background-color: var(--color-secondary, #023e8a);
+  color: #ffffff;
+}
+
+/* 📱 Responsivo Mobile */
+@media (max-width: 768px) {
+  .clientes {
+    padding: 1.5rem 1rem;
+  }
+
+  .clientes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .cliente-card {
+    padding: 0.8rem;
+  }
+
+  .cliente-img {
+    height: 130px;
+  }
+
+  .cliente-card h2 {
+    font-size: 0.95rem;
+  }
+
+  .descripcion {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .comuna, .direccion, .contacto, .rrss, .categoria {
+    font-size: 0.75rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .ver-mas {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.8rem;
+  }
+}
+```eof
+
+He realizado los siguientes ajustes clave para corregir la vista desktop:
+
+1. **Contenedor centrado y alineado (`max-width: 1280px; margin: 0 auto;`)**: Evita que las tarjetas se estiren infinitamente en monitores de alta resolución (1080p / 2K).
+2. **Distribución por Flexbox (`display: flex; flex-direction: column;`)**: Se configuraron las tarjetas en columna vertical. El campo `.descripcion` usa `flex-grow: 1` y el botón `.ver-mas` usa `margin-top: auto`, asegurando que todas las tarjetas de una misma fila mantengan la misma altura y sus botones queden perfectamente alineados en el borde inferior.
+3. **Proporción de imagen uniforme (`height: 180px; object-fit: cover;`)**: Evita que imágenes de diferentes tamaños deformen o desfasen el diseño de la cuadrícula.
+4. **Limpieza del CSS**: Se eliminó la regla `@media` que estaba duplicada y anidada dentro de sí misma en tu archivo anterior.
+
+¿Te gustaría ajustar los colores institucionales de los botones o modificar la altura de las tarjetas?El problema de la sensación de "descuadre" en desktop ocurre principalmente por tres razones:
+
+1. **Tarjetas de distinta altura:** Si los textos o descripciones tienen largos diferentes, las tarjetas quedan desalineadas.
+2. **Proporción de imágenes variable:** Como `height: auto` depende del ratio original de cada imagen, las tarjetas se ven desiguales en la grilla.
+3. **`minmax(260px, 1fr)` en desktop grande:** Puede estirar demasiado pocas tarjetas o dejar huecos raros según la pantalla.
+
+Además, el código media query tiene un bloque anidado por error al final que conviene limpiar.
+
+Aquí tienes la versión ajustada y optimizada para desktop (usando Flexbox dentro de cada tarjeta para igualar alturas y alinear contenidos):
+
+```css
+.clientes {
+  padding: 3rem 2rem;
+  max-width: 1200px; /* Centra y limita el contenedor en pantallas muy grandes */
+  margin: 0 auto;
   text-align: center;
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -11,22 +206,28 @@
 }
 
 .clientes p {
-  margin-bottom: 1.5rem; /* menos espacio */
+  margin-bottom: 2rem;
 }
 
 .clientes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem; /* menos separación entre cards */
+  /* En desktop define columnas estables y uniformes */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch; /* Fuerza a todas las tarjetas a medir lo mismo de alto */
 }
 
 .cliente-card {
   background: #ffffff;
   border-radius: 12px;
-  padding: 1rem; /* más compacto */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: left;
+  
+  /* Convierte la tarjeta en flex vertical para empujar el contenido de manera uniforme */
+  display: flex;
+  flex-direction: column;
 }
 
 .cliente-card:hover {
@@ -36,30 +237,32 @@
 
 .cliente-img {
   width: 100%;
-  height: auto;          /* altura automática */
-  max-height: 200px;     /* límite opcional para que no se desborde */
-  object-fit: contain;   /* muestra la imagen completa */
-  border-radius: 10px;
-  margin-bottom: 0.5rem;
+  height: 180px;        /* Altura fija para alineación perfecta en desktop */
+  object-fit: contain;  /* Mantiene la proporción sin deformar */
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  background-color: #f8f9fa; /* Fondo neutro por si la imagen tiene transparencias */
 }
-
 
 .cliente-card h2 {
   color: var(--color-secondary);
-  margin-bottom: 0.3rem;
-  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
 }
 
 .descripcion {
-  margin-bottom: 0.5rem;
-  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  /* Empuja los datos de contacto/ubicación hacia el fondo de la tarjeta */
+  flex-grow: 1; 
 }
 
 .comuna, .direccion, .contacto, .rrss, .categoria {
   display: block;
   font-size: 0.8rem;
-  margin-bottom: 0.15rem; /* casi pegados */
-  line-height: 1.2;       /* más compacto */
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
 }
 
 .comuna {
@@ -70,6 +273,10 @@
 .categoria {
   font-style: italic;
   color: var(--color-accent);
+}
+
+.rrss {
+  margin-top: 0.4rem;
 }
 
 .rrss a {
@@ -84,38 +291,36 @@
 }
 
 
-/* 📱 Solo en mobile: dos columnas */
+/* 📱 Mobile: Ajustes limpios */
 @media (max-width: 768px) {
-  .clientes-grid {
-    grid-template-columns: repeat(2, 1fr); /* dos columnas en mobile */
-    gap: 1rem;
+  .clientes {
+    padding: 1.5rem 1rem;
   }
 
-   .cliente-card {
+  .clientes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .cliente-card {
     padding: 0.8rem;
   }
 
- @media (max-width: 768px) {
   .cliente-img {
-    height: auto;
-    max-height: 250px;
-    object-fit: contain; /* asegura que no se recorte en pantallas pequeñas */
+    height: 130px; /* Reducido para pantallas pequeñas */
   }
-}
-
 
   .cliente-card h2 {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .descripcion {
     font-size: 0.8rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
   }
 
   .comuna, .direccion, .contacto, .rrss, .categoria {
     font-size: 0.75rem;
     margin-bottom: 0.1rem;
-    line-height: 1.1;
   }
 }

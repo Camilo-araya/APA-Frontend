@@ -5,7 +5,7 @@ const Planes = () => {
     {
       nombre: "Plan Básico",
       descripcion: "Publicidad inicial para tu Pyme con bajo costo y resultados medibles.",
-      precio: "$30.000 CLP / mes",
+      precio: "$15.000 CLP / mes",
     },
     {
       nombre: "Plan Estrella",
@@ -19,6 +19,12 @@ const Planes = () => {
     },
   ];
 
+  const handleContratar = (nombrePlan) => {
+    const telefono = "569XXXXXXXX"; // Reemplaza con tu número comercial
+    const mensaje = encodeURIComponent(`Hola, me interesa contratar el ${nombrePlan} para mi PyME.`);
+    window.open(`https://wa.me/${telefono}?text=${mensaje}`, "_blank");
+  };
+
   return (
     <section className="planes">
       <h1>Nuestros Planes de Marketing</h1>
@@ -28,7 +34,9 @@ const Planes = () => {
             <h2>{plan.nombre}</h2>
             <p>{plan.descripcion}</p>
             <span className="precio">{plan.precio}</span>
-            <button className="cta-btn">Contratar</button>
+            <button className="cta-btn" onClick={() => handleContratar(plan.nombre)}>
+              Contratar por WhatsApp
+            </button>
           </div>
         ))}
       </div>

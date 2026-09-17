@@ -1,0 +1,104 @@
+.quienes-somos {
+  padding: 3rem 2rem;
+  background-color: var(--color-bg, #f8f9fa);
+  color: var(--color-text, #333);
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quienes-somos-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quienes-somos h1 {
+  color: var(--color-primary, #0077b6);
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: #555;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.valor-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.valor-card h2 {
+  color: var(--color-secondary, #023e8a);
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.valor-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+.compromiso {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.compromiso h2 {
+  color: var(--color-secondary, #023e8a);
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.compromiso p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Adaptación Responsive */
+@media (max-width: 768px) {
+  .quienes-somos {
+    padding: 2rem 1rem;
+  }
+
+  .quienes-somos h1 {
+    font-size: 1.8rem;
+  }
+
+  .intro {
+    font-size: 0.95rem;
+  }
+
+  .valores-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .valor-card, .compromiso {
+    padding: 1.2rem;
+  }
+}

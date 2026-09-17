@@ -1,11 +1,11 @@
 import academiaImg from "../assets/Clientes/Academia_Arqueros_SM.jpg";
 import muebleriaToshitaImg from "../assets/Clientes/muebleria_toshita.jpg";
+import barberStudioCrcImg from "../assets/Clientes/barber_studio_crc.jpg";
 import farmaciaelSolImg from "../assets/Clientes/farmacia_el_sol.png";
-import BarberStudioCrcImg from "../assets/Clientes/barber_studio_crc.jpg";
-import EscuelaAlfredoRojasImg from "../assets/Clientes/escuela_alfredo_rojas.png";
-import LaCasadelaEmpanadaImg from "../assets/Clientes/la_casa_dela_empanada.png";
-import DulceSaladoImg from "../assets/Clientes/dulce_salado.jpg";
-import JardindeHamburguesasImg from "../assets/Clientes/Jardin_de_Hamburguesas.png";
+import escuelaAlfredoRojasImg from "../assets/Clientes/escuela_alfredo_rojas.png";
+import laCasadelaEmpanadaImg from "../assets/Clientes/la_casa_dela_empanada.png";
+import dulceSaladoImg from "../assets/Clientes/dulce_salado.jpg";
+import jardinDeHamburguesasImg from "../assets/Clientes/Jardin_de_Hamburguesas.png";
 
 export const clientes = [
   {
@@ -14,7 +14,7 @@ export const clientes = [
     descripcion: "Entrenamiento de arqueros para todas las edades y niveles.",
     comuna: "Curacavi",
     direccion: "Av. Ohiggins",
-    contacto: "+56 9 1234 5678",
+    contacto: "+56966471630",
     rrss: "@academiaarqueros",
     categoria: "Deporte",
     imagen: academiaImg
@@ -25,34 +25,34 @@ export const clientes = [
     descripcion: "Muebles de diseño y calidad para tu hogar.",
     comuna: "Curacavi",
     direccion: "Feliciano Cornejo 340",
-    contacto: "+56 9 8765 4321",
+    contacto: "+56997394227",
     rrss: "@toshita",
     categoria: "Mueblería",
     imagen: muebleriaToshitaImg
   },
   {
     nombre: "Barber Studio Crc",
-    slug: "BarberStudioCrc",
+    slug: "barber-studio-crc",
     descripcion: "Barbería con estilo y servicio de calidad para hombres modernos.",
     comuna: "Curacavi",
     direccion: "Presbitero Moraga 246",
     contacto: "+5698904312",
-    rrss: "@barberstudio.cr.c",
+    rrss: "@Studio.Cr.c",
     categoria: "Barbería",
-    imagen: BarberStudioCrcImg
+    imagen: barberStudioCrcImg
   },
   {
     nombre: "Farmacia el Sol",
     slug: "farmacia-el-sol",
     descripcion: "Farmacia con productos de calidad y servicio personalizado.",
     comuna: "Curacavi",
-    direccion: "Av. Ohiggins",
-    contacto: "+56 2 2345 6789",
+    direccion: "Av. Ohiggins 1447",
+    contacto: "(2) 28363285",
     rrss: "@farmaciaelsol",
     categoria: "Farmacia",
     imagen: farmaciaelSolImg
   },
-    {
+  {
     nombre: "Escuela De Fútbol Alfredo Rojas",
     slug: "escuela-de-futbol-alfredo-rojas",
     descripcion: "Escuela de fútbol para niños y jóvenes.",
@@ -61,20 +61,20 @@ export const clientes = [
     contacto: "+56968195868",
     rrss: "@escuelalfredorojas",
     categoria: "Deporte",
-    imagen: EscuelaAlfredoRojasImg
+    imagen: escuelaAlfredoRojasImg
   },
-     {
+  {
     nombre: "Casa de la Empanada Curacaví",
     slug: "casa-de-la-empanada-curacavi",
     descripcion: "Deliciosas empanadas artesanales.",
     comuna: "Curacavi",
-    direccion: "Av. Ohiggins 1500",
+    direccion: "Av. Ohiggins",
     contacto: "+56982332324",
     rrss: "@laCasadelaEmpanada_cvi",
     categoria: "Comida",
-    imagen: LaCasadelaEmpanadaImg
+    imagen: laCasadelaEmpanadaImg
   },
-     {
+  {
     nombre: "Dulce Salado Curacaví",
     slug: "dulce-salado-curacavi",
     descripcion: "Tortas, pasteles, coqteles y más.",
@@ -83,10 +83,10 @@ export const clientes = [
     contacto: "+56996125036",
     rrss: "@DulceSaladoCuracavi",
     categoria: "Comida",
-    imagen: DulceSaladoImg
+    imagen: dulceSaladoImg
   },
-     {
-    nombre: "Jardin de Hamburguesas",
+  {
+    nombre: "Jardín de Hamburguesas",
     slug: "jardin-de-hamburguesas",
     descripcion: "Hamburguesas gourmet con ingredientes frescos y deliciosos.",
     comuna: "Curacavi",
@@ -94,7 +94,6 @@ export const clientes = [
     contacto: "+56975315927",
     rrss: "@jardindehamburguesas",
     categoria: "Comida",
-    imagen: JardindeHamburguesasImg
+    imagen: jardinDeHamburguesasImg
   }
-
 ];

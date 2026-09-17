@@ -8,20 +8,20 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <h1 className="logo">
-  <Link to="/">Agencia Publica Aquí</Link>
-</h1>
+        <Link to="/">Agencia Publica Aquí</Link>
+      </h1>
 
-<button className="menu-toggle" onClick={() => setOpen(!open)}>
-  {open ? "✖" : "☰"}
-</button>
+      <button className="menu-toggle" onClick={() => setOpen(!open)}>
+        {open ? "✖" : "☰"}
+      </button>
 
-<ul className={`navbar-links ${open ? "open" : ""}`}>
-  <li><Link to="/" onClick={() => setOpen(false)}>Inicio</Link></li>
-  <li><Link to="/planes" onClick={() => setOpen(false)}>Planes</Link></li>
-  <li><Link to="/clientes" onClick={() => setOpen(false)}>Clientes</Link></li>
-  <li><Link to="/about" onClick={() => setOpen(false)}>Quienes Somos</Link></li>
-</ul>
-
+      <ul className={`navbar-links ${open ? "open" : ""}`}>
+        <li><Link to="/" onClick={() => setOpen(false)}>Inicio</Link></li>
+        <li><Link to="/planes" onClick={() => setOpen(false)}>Planes</Link></li>
+        <li><Link to="/clientes" onClick={() => setOpen(false)}>Clientes</Link></li>
+        {/* Cambiado de /about a /quienes-somos */}
+        <li><Link to="/quienes-somos" onClick={() => setOpen(false)}>Quienes Somos</Link></li>
+      </ul>
     </nav>
   );
 };
