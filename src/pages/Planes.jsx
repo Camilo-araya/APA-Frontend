@@ -4,7 +4,7 @@ const Planes = () => {
   const planes = [
     {
       nombre: "Plan Básico",
-      precio: "$15.000 CLP / mes",
+      precio: "$15.000 CLP / mes + IVA",
       descripcion: "Publicidad inicial geolocalizada para PyMEs que quieren empezar a captar clientes locales.",
       detalles: [
         "Inversión publicitaria en Meta Ads (Instagram / Facebook)",
@@ -16,7 +16,7 @@ const Planes = () => {
     },
     {
       nombre: "Plan Estrella",
-      precio: "$50.000 CLP / mes",
+      precio: "$30.000 CLP / mes + IVA",
       descripcion: "Campañas avanzadas con mayor frecuencia para negocios que buscan aumentar ventas semanales.",
       detalles: [
         "Mayor cobertura en Meta Ads o Google Ads",
@@ -28,7 +28,7 @@ const Planes = () => {
     },
     {
       nombre: "Plan Premium",
-      precio: "$80.000 CLP / mes",
+      precio: "$80.000 CLP / mes + IVA",
       descripcion: "Estrategia integral multicanal para dominar la presencia digital en tu zona.",
       detalles: [
         "Estrategia combinada Meta Ads + Google Ads",
@@ -43,12 +43,12 @@ const Planes = () => {
   const adicionales = [
     {
       titulo: "🤖 Sistema de Agendamiento Automático por WhatsApp",
-      precio: "+$20.000 CLP / mes",
+      precio: "+$20.000 CLP / mes + IVA",
       descripcion: "Responde clientes 24/7, muestra tu catálogo en el chat y agenda citas o pedidos de forma automática sin perder ninguna venta fuera de horario."
     },
     {
       titulo: "📸 Creación de Contenido Visual & Fotografía",
-      precio: "+$20.000 CLP / servicio",
+      precio: "+$20.000 CLP / servicio + IVA",
       descripcion: "Diseño y producción de imágenes o piezas gráficas profesionales optimizadas para formato historias/feed y listas para pauta publicitaria."
     }
   ];
